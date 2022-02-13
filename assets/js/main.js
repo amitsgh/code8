@@ -233,7 +233,7 @@ successAlert.style.display = "none";
 failAlert.style.display = "none";
 
 username.addEventListener("blur", () => {
-    let regex = /^[a-zA-Z]([0-9a-zA-Z]){1,10}$/;
+    let regex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     let str = username.value;
     if (regex.test(str)) {
         username.classList.remove("is-invalid");
